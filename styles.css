@@ -1,45 +1,75 @@
-	@media screen and (max-width: 768px) {
-		nav ul {
-			flex-direction: column;
-			position: absolute;
-			top: 60px;
-			left: 0;
-			right: 0;
-			background-color: #f5f5f5;
-			padding: 10px;
-			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-			display: none;
-		}
-		
-		nav li {
-			margin: 10px 0;
-		}
-		
-		nav a {
-			padding: 5px;
-		}
-		
-		nav a:hover {
-			background-color: #333;
-			color: #fff;
-		}
-		
-		nav ul.show {
-			display: flex;
-		}
-		
-		.menu-icon {
-			font-size: 24px;
-			color: #333;
-			cursor: pointer;
-			display: block;
-			margin-left: auto;
-		}
-	}
-	
-	@media screen and (min-width: 768px) {
-		.empty-space {
-			min-height: 200px;
-		}
-	}
-</style>
+/* Styling for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #f7f7f7;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+th {
+  background-color: #55b9f3;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px;
+}
+
+td {
+  padding: 10px;
+}
+
+tbody tr:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Styling for the player images */
+.player-image {
+  width: 120px;
+  height: 120px;
+  border: 5px solid #55b9f3;
+  border-radius: 50%;
+  margin: 10px;
+  display: inline-block;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.player-image:hover {
+  transform: scale(1.1);
+}
+
+/* Styling for the empty spaces */
+.empty-space {
+  border: 2px dashed #b3b3b3;
+  width: 120px;
+  height: 120px;
+  margin: 10px;
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+  padding: 2rem;
+}
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+
+.draggable {
+  width: 100px;
+  height: 100px;
+  margin: 1rem;
+  border-radius: 50%;
+  box-shadow: 0 0 10
