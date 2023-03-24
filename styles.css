@@ -1,12 +1,14 @@
+
+#title {
+  text-align: center;
+  padding: 20px 100px;
+}
+
 /* Styling for the table */
 table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 80%;
   background-color: #f7f7f7;
   font-family: Arial, sans-serif;
-  text-align: center;
 }
 
 th {
@@ -16,24 +18,39 @@ th {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 15px;
+  text-align: center;
 }
 
 td {
-  padding: 10px;
+  word-wrap:break-word;
+  vertical-align: middle;
 }
-
-tbody tr:nth-of-type(odd) {
-  background-color: #f2f2f2;
-}
+.table tr td:last-child {
+  width: 100%;
+  }
 
 /* Styling for the player images */
+
+.imagebox {
+  position: relative;
+  width: 10%;
+     display: inline-block;
+}
+
+.imagebox img {
+  display: inline-block;
+  width: 75%;
+  height: auto;
+}
+
+.imagebox:hover p {
+  visibility: visible;
+}
+
 .player-image {
-  width: 120px;
-  height: 120px;
-  border: 5px solid #55b9f3;
+  border: 5px solid #fff;
   border-radius: 50%;
   margin: 10px;
-  display: inline-block;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
@@ -42,34 +59,46 @@ tbody tr:nth-of-type(odd) {
   transform: scale(1.1);
 }
 
-/* Styling for the empty spaces */
-.empty-space {
-  border: 2px dashed #b3b3b3;
-  width: 120px;
+.table tr td .player-image{
   height: 120px;
-  margin: 10px;
-  display: inline-block;
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 70vh;
-  padding: 2rem;
-}
-.image-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
+.overlay_text {
+  position:absolute;
+  top: 50%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  background-color: blue;
+  color: white;
+  visibility: hidden;
 }
 
-.draggable {
-  width: 100px;
-  height: 100px;
-  margin: 1rem;
-  border-radius: 50%;
-  box-shadow: 0 0 10
+/* cta button */
+#cta {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-block: 40px 70px;
+}
+/* footer */
+#footer {
+  text-align: center;
+  background-color: #212529;
+  color: #fff;
+  padding: 15px;
+}
+
+#footer p {
+  margin: 0;
+}
+
+.line-text {
+  font-family: 'Arial';
+  text-align: center;
+  width: 100%;
+  margin: 0px auto;
+  font-size: 80px;
+  letter-spacing: 5px;
+}
