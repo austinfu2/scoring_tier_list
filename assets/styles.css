@@ -25,7 +25,8 @@ td {
   word-wrap:break-word;
   vertical-align: middle;
 }
-.table tr td:last-child {
+
+table tr td:last-child {
   width: 100%;
   }
 
@@ -35,6 +36,9 @@ td {
   position: relative;
   width: 10%;
      display: inline-block;
+  flex-basis: calc(33.33% - 20px); /* adjust as needed to get 3 images per row */
+  margin: 10px;
+  text-align: center;
 }
 
 .imagebox img {
@@ -53,6 +57,9 @@ td {
   margin: 10px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  display: block;
+  width: 150px;
+  height: 150px;
 }
 
 .player-image:hover {
@@ -101,4 +108,9 @@ td {
   margin: 0px auto;
   font-size: 80px;
   letter-spacing: 5px;
+}
+
+#player-images {
+  display: flex;
+  flex-wrap: wrap;
 }
